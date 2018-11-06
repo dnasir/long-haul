@@ -10,7 +10,7 @@ title: Long Haul
       <li>
         <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
         <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        {% if post.description %}<p>{{ post.description }}</p>{% else %}{{ post.excerpt | markdownify }}{% endif %}
+        {% if post.description %}{{ post.description | markdownify }}{% else %}{{ post.excerpt | markdownify }}{% endif %}
       </li>
     {% endfor %}
   </ul>
